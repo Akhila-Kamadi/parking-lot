@@ -1,12 +1,23 @@
 package dtos;
 
 import models.EntryGate;
+import models.ParkingLot;
 import models.Vehicle;
+import models.enums.ParkingSpotType;
 
 public class GenerateTicketRequestDto {
     private EntryGate entryGate;
     private Vehicle vehicle;
-    private Long parkingLotId;
+    private ParkingLot parkingLot;
+    private ParkingSpotType parkingSpotType;
+
+    public ParkingSpotType getParkingSpotType() {
+        return parkingSpotType;
+    }
+
+    public void setParkingSpotType(ParkingSpotType parkingSpotType) {
+        this.parkingSpotType = parkingSpotType;
+    }
 
     public EntryGate getEntryGate() {
         return entryGate;
@@ -24,11 +35,11 @@ public class GenerateTicketRequestDto {
         this.vehicle = vehicle;
     }
 
-    public Long getParkingLotId() {
-        return parkingLotId;
+    public ParkingLot getParkingLot() {
+        return parkingLot;
     }
 
-    public void setParkingLotId(Long parkingLotId) {
-        this.parkingLotId = parkingLotId;
+    public void setParkingLot(ParkingLot parkingLot) {
+        this.parkingLot = parkingLot;
     }
 }
