@@ -3,6 +3,7 @@ import controllers.TicketController;
 import controllers.VehicleController;
 import dtos.*;
 import models.EntryGate;
+import models.Vehicle;
 import repositories.ParkingLotRepository;
 import repositories.TicketRepository;
 import repositories.VehicleRepository;
@@ -61,7 +62,7 @@ public class Client {
                 (VehicleService) ObjectRegistry.get("VehicleService")
         ));
         GenerateTicketRequestDto ticketRequest = new GenerateTicketRequestDto();
-        ticketRequest.setParkingLot(response.getParkingLot());
+        ticketRequest.setParkingLotId(1L);
 
     }
 }

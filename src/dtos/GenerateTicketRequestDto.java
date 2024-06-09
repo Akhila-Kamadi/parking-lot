@@ -8,16 +8,8 @@ import models.enums.ParkingSpotType;
 public class GenerateTicketRequestDto {
     private EntryGate entryGate;
     private Vehicle vehicle;
-    private ParkingLot parkingLot;
+    private Long parkingLotId;
     private ParkingSpotType parkingSpotType;
-
-    public ParkingSpotType getParkingSpotType() {
-        return parkingSpotType;
-    }
-
-    public void setParkingSpotType(ParkingSpotType parkingSpotType) {
-        this.parkingSpotType = parkingSpotType;
-    }
 
     public EntryGate getEntryGate() {
         return entryGate;
@@ -35,11 +27,19 @@ public class GenerateTicketRequestDto {
         this.vehicle = vehicle;
     }
 
-    public ParkingLot getParkingLot() {
-        return parkingLot;
+    public Long getParkingLotId() {
+        return parkingLotId;
     }
 
-    public void setParkingLot(ParkingLot parkingLot) {
-        this.parkingLot = parkingLot;
+    public void setParkingLotId(Long parkingLotId) {
+        this.parkingLotId = parkingLotId;
+    }
+
+    public ParkingSpotType getParkingSpotType() {
+        return parkingSpotType;
+    }
+
+    public void setParkingSpotType(ParkingSpotType parkingSpotType) {
+        this.parkingSpotType = parkingSpotType;
     }
 }

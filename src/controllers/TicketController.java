@@ -14,7 +14,7 @@ public class TicketController {
     }
 
     public GenerateTicketResponseDto generateTicket(GenerateTicketRequestDto request){
-        Ticket createdTicket = ticketService.generateTicket(request.getParkingLot().getId(), request.getParkingSpotType(),
+        Ticket createdTicket = ticketService.generateTicket(request.getParkingLotId(), request.getParkingSpotType(),
                 request.getVehicle(), request.getEntryGate());
         GenerateTicketResponseDto response = new GenerateTicketResponseDto();
         response.setTicket(createdTicket);
@@ -25,7 +25,7 @@ public class TicketController {
 /*
 To create a ticket ->
 1. Create ParkingLot
-2. Create Vehicle
-3. Create EntryGate
+2. Create Vehicle -> we can pass vehicleId in dto
+3. Create EntryGate -> --------"OperatorId in dto
 4. Create/generate a ticket
  */
