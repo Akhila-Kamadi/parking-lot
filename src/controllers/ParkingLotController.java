@@ -43,4 +43,8 @@ public class ParkingLotController {
         response.setResponseStatus(ResponseStatusDto.SUCCESS);
         return response;
     }
+
+    //add parking spot
+    //for which parkingFloor, what type of spot and how many => same as addseats in auditorium in BMS
+    //
 }
